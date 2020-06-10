@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.test.slidingmenu.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slidingmenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".slidingmenu.SlidingMenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="-300dp"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/menulayout"
+            android:layout_width="300dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/meinvzhu"
+                android:layout_height="match_parent"></ImageView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:onClick="setOverScroll"
+                android:layout_width="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:text="切换overscroll状态"
+                android:layout_height="wrap_content"></Button>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:scaleType="centerInside"
+                android:background="@color/colorAccent"
+                android:src="@drawable/xiaozhuzai"
+                android:layout_height="match_parent"></ImageView>
+        </FrameLayout>
+    </LinearLayout>
+</com.example.test.slidingmenu.SlidingMenu>
