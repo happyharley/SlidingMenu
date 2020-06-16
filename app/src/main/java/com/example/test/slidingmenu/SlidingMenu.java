@@ -61,21 +61,17 @@ public class SlidingMenu extends FrameLayout {
                 if (isMenuClosed) {//如果已关闭菜单
                     if (releasedChild.getLeft() < -mMenuWidth + mTouchSlop) {//完全关闭的时候releasedChild.getLeft()=-mMenuWidth，手指抬起后，如果滑动的距离超过mTouchSlop，则打开抽屉菜单
                         viewDragHelper.smoothSlideViewTo(child, -mMenuWidth, 0);//相当于scroller的startScroll方法
-                        ViewCompat.postInvalidateOnAnimation(SlidingMenu.this);
                     } else {
                         viewDragHelper.smoothSlideViewTo(child, 0, 0);
-                        ViewCompat.postInvalidateOnAnimation(SlidingMenu.this);
                     }
                 } else {//菜单已打开状态
                     if (releasedChild.getLeft() < -mTouchSlop) {//手指抬起后，如果距离左边小于500，则自由滑动到边缘，关闭抽屉菜单
                         viewDragHelper.smoothSlideViewTo(child, -mMenuWidth, 0);//相当于scroller的startScroll方法
-                        ViewCompat.postInvalidateOnAnimation(SlidingMenu.this);
                     } else {
                         viewDragHelper.smoothSlideViewTo(child, 0, 0);
-                        ViewCompat.postInvalidateOnAnimation(SlidingMenu.this);
                     }
                 }
-
+                ViewCompat.postInvalidateOnAnimation(SlidingMenu.this);
             }
 
         });
