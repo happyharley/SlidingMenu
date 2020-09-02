@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_color_matrix">
+
+    <fragment
+        android:id="@+id/navigation_color_matrix"
+        android:name="com.example.test.cavas.ui.colormatrix.MatrixFragment"
+        android:label="@string/title_color_matrix"
+        tools:layout="@layout/fragment_colormatrix" />
+
+    <fragment
+        android:id="@+id/navigation_translation_matrix"
+        android:name="com.example.test.cavas.ui.translationmatrix.TranslationMatrixFragment"
+        android:label="@string/title_translation_matrix"
+        tools:layout="@layout/fragment_translationmatrix" />
+
+    <fragment
+        android:id="@+id/navigation_porterduffxfermode"
+        android:name="com.example.test.cavas.ui.porterduffxfermode.PorterDuffXferModeFragment"
+        android:label="@string/title_xfermode"
+        tools:layout="@layout/fragment_porterduffxfermode" />
+    <fragment
+        android:id="@+id/navigation_shader"
+        android:name="com.example.test.cavas.ui.shader.ShaderFragment"
+        android:label="@string/title_shader"
+        tools:layout="@layout/fragment_porterduffxfermode" />
+</navigation>

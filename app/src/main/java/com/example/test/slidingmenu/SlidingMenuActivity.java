@@ -1,7 +1,9 @@
 package com.example.test.slidingmenu;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 

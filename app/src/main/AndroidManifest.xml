@@ -5,17 +5,35 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:installLocation="internalOnly"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".slidingmenu.SlidingMenuActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity
+            android:name=".animation.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar">
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        </activity>
+        <activity android:name=".sufaceview.MainActivity" />
+        <activity
+            android:name=".cavas.CanvasMatrixActivity"
+            android:label="@string/title_activity_matrix"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".cavas.HueSaturationLumActivity"
+            android:label="@string/title_activity_cavas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".slidingmenu.SlidingMenuActivity"
+            android:windowSoftInputMode="adjustNothing" />
+
     </application>
 
 </manifest>
