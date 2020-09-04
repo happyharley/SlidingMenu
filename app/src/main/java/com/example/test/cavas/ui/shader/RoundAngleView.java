@@ -5,6 +5,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Shader;
 import android.util.AttributeSet;
@@ -30,6 +32,7 @@ public class RoundAngleView extends View {
 //        mBitmapShader = new BitmapShader(mBitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
 //        mPaint.setShader(mBitmapShader);
 
+        mPaint.setShader(new LinearGradient(0, 0, 400, 0, Color.YELLOW, Color.BLUE, Shader.TileMode.REPEAT));
         mBitmapShader = new BitmapShader(mBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
         mPaint.setShader(mBitmapShader);
 
@@ -48,6 +51,7 @@ public class RoundAngleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawCircle(500, 250, 200, mPaint);
+//        canvas.drawCircle(100, 100, 500, mPaint);
+        canvas.drawRect(0, 0, 1000, 1000, mPaint);
     }
 }
